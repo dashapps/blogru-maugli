@@ -1,5 +1,5 @@
 // MAUGLI_CONFIG_VERSION — config version for CLI/automation compatibility
-export const MAUGLI_CONFIG_VERSION = '0.1';
+export const MAUGLI_CONFIG_VERSION = '0.3';
 // Main configuration interface for the Maugli project
 export interface MaugliConfig {
   // Show example/demo content (for CLI/empty blog setup)
@@ -18,6 +18,11 @@ export interface MaugliConfig {
     farmRubricIds?: string[];    // Array of farm rubric IDs for API
     farmProductIds?: string[];   // Array of farm product IDs for API
     farmProjectIds?: string[];   // Array of farm project/case IDs for API
+  };
+  // Repository settings for deployment
+  repository?: {
+    url?: string; // User's repository URL for Netlify deployment button
+    netlifyEnabled?: boolean; // Enable Netlify deployment button (default: true)
   };
   // Brand and logo settings
   brand: {
@@ -48,6 +53,12 @@ export interface MaugliConfig {
     enableMultiLang: boolean; // Enable multilingual support
     enableFAQ: boolean; // Enable FAQ block
     enableRSS: boolean; // Enable RSS feed
+  };
+  // Progressive Web App settings
+  pwa?: {
+    themeColor?: string; // Theme color for the PWA manifest
+    backgroundColor?: string; // Background color for the PWA manifest
+    icons?: Array<{ src: string; sizes: string; type: string; purpose?: string }>; // Icons for the PWA manifest
   };
   // Control display of tags/rubrics
   // Theme switcher
@@ -82,132 +93,166 @@ export interface MaugliConfig {
 }
 // Main exported configuration object for the Maugli project
 export const maugliConfig: MaugliConfig = {
-  configVersion: MAUGLI_CONFIG_VERSION, // Config version for CLI/automation compatibility
-  showExamples: true, // Show example/demo content (set false to hide all demo content)
-  brand: {
-    name: 'Maugli', // Brand name
-    description: 'Content farm for smart automation', // Brand description
-    logoLight: '/logoblog-icon.svg', // Logo for navigation (light theme). Used for dark theme if logoDark is not specified.
-    // Logo for navigation (dark theme). If not specified, logoLight is used.
-    logoDark: undefined,
-    // Logo link (main site). If not specified, links to blog index.
-    logoHref: 'https://maugli.cfd',
-    logoBreadcrumbsLight: '/logo-icon.svg', // Logo for breadcrumbs (light theme). Used for dark theme if logoBreadcrumbsDark is not specified.
-    // Logo for breadcrumbs (dark theme). If not specified, logoBreadcrumbsLight is used.
-    logoBreadcrumbsDark: undefined,
+  "configVersion": "0.3",
+  "showExamples": true,
+  "brand": {
+    "name": "Maugli",
+    "description": "Content farm for smart automation",
+    "logoLight": "/logoblog-icon.svg",
+    "logoHref": "https://maugli.cfd",
+    "logoBreadcrumbsLight": "/logo-icon.svg"
   },
-  // Automation block for Maugli farm integration (not used on frontend)
-  automation: {
-    farmName: 'maugli_team',         // Name of the farm/channel for integration
-    farmChannelId: '',    // Blog/channel ID for Maugli farm integration
-    farmAuthorIds: [],    // Array of farm author IDs for API
-    farmRubricIds: [],    // Array of farm rubric IDs for API
-    farmProductIds: [],   // Array of farm product IDs for API
-    farmProjectIds: [],   // Array of farm project/case IDs for API
+  "automation": {
+    "farmName": "maugli_team",
+    "farmChannelId": "",
+    "farmAuthorIds": [],
+    "farmRubricIds": [],
+    "farmProductIds": [],
+    "farmProjectIds": []
   },
-  enableThemeSwitcher: true, // Enable theme switcher (true by default)
-  seo: {
-    titleSuffix: ' — Maugli', // Suffix for page titles
-    defaultImage: '/default-image.webp', // Default image for SEO
-    get author() { return maugliConfig.defaultAuthorId || 'igor-sokolov'; }, // Default author (getter)
-    jsonld: {
-      organization: {
-        name: 'Maugli AI Editorial System',
-        url: 'https://maugli.cfd/',
-        logo: 'https://maugli.cfd/images/logo.svg',
-        sameAs: [
-          'https://www.linkedin.com/company/maugli-ai-editorial-system/',
-          'https://x.com/DZorina97078',
-          'https://t.me/maugli_channel'
+  "enableThemeSwitcher": true,
+  "seo": {
+    "titleSuffix": " — Maugli",
+    "defaultImage": "/default-image.webp",
+    "author": "default-autor",
+    "jsonld": {
+      "organization": {
+        "name": "Maugli AI Editorial System",
+        "url": "https://maugli.cfd/",
+        "logo": "https://maugli.cfd/images/logo.svg",
+        "sameAs": [
+          "https://www.linkedin.com/company/maugli-ai-editorial-system/",
+          "https://x.com/DZorina97078",
+          "https://t.me/maugli_channel"
         ],
-        contact: {
-          email: 'info@maugli.cfd',
-          contactType: 'customer support'
+        "contact": {
+          "email": "info@maugli.cfd",
+          "contactType": "customer support"
         }
       },
-      website: {
-        name: 'Maugli AI Editorial System',
-        url: 'https://maugli.cfd/',
-        searchTemplate: 'https://maugli.cfd/search?q={search_term_string}'
+      "website": {
+        "name": "Maugli AI Editorial System",
+        "url": "https://maugli.cfd/",
+        "searchTemplate": "https://maugli.cfd/search?q={search_term_string}"
       },
-      articleDefaults: {
-        publisher: 'Maugli AI Editorial System',
-        author: 'Игорь Соколов',
-        image: 'https://maugli.cfd/images/default-article.jpg',
-        language: 'maugliConfig.defaultLang'
+      "articleDefaults": {
+        "publisher": "Maugli AI Editorial System",
+        "author": "Игорь Соколов",
+        "image": "https://maugli.cfd/images/default-article.jpg",
+        "language": "maugliConfig.defaultLang"
       },
-      schema: {
-        '@context': 'https://schema.org',
-        '@type': 'Organization',
-        name: 'Maugli',
-        url: 'https://maugli.cfd',
-        logo: 'https://maugli.cfd/logoblog-icon.svg',
-        founder: 'Daria Zorina'
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Maugli",
+        "url": "https://maugli.cfd/ru",
+        "logo": "https://maugli.cfd/logoblog-icon.svg",
+        "founder": "Daria Zorina"
       }
     }
   },
-  defaultBlogImage: 'src/assets/img/default/blog_default.webp', // Default blog image
-  defaultProductImage: 'src/assets/img/default/product_default.webp', // Default product image
-  defaultProjectImage: 'src/assets/img/default/project_default.webp', // Default project/case image
-  defaultAuthorImage: 'src/assets/img/default/autor_default.webp', // Default author image
-  defaultRubricImage: 'src/assets/img/default/rubric_default.webp', // Default rubric/category image
-  features: {
-    enableSubscribe: true, // Enable subscribe block
-    enableMultiLang: false, // Enable multilingual support
-    enableFAQ: true, // Enable FAQ block
-    enableRSS: true, // Enable RSS feed
+  "defaultBlogImage": "src/assets/img/default/blog_default.webp",
+  "defaultProductImage": "src/assets/img/default/product_default.webp",
+  "defaultProjectImage": "src/assets/img/default/project_default.webp",
+  "defaultAuthorImage": "src/assets/img/default/autor_default.webp",
+  "defaultRubricImage": "src/assets/img/default/rubric_default.webp",
+  "features": {
+    "enableSubscribe": true,
+    "enableMultiLang": false,
+    "enableFAQ": true,
+    "enableRSS": true
   },
-  showOnlyRubricsTags: true, // Show only rubrics by default
-
-  links: {
-    products: '/products', // Products page
-    about: '/about', // About page
-    email: 'mailto:info@maugli.cfd', // Contact email
-    telegram: 'https://t.me/mauglibot', // Telegram link
-    mastodon: '', // Mastodon link
-    medium: 'https://medium.com/@maugli', // Medium link
-    bluesky: '', // Bluesky link
-    reddit: '', // Reddit link
-    linkedin: 'https://linkedin.com/company/maugli', // LinkedIn link
-    twitter: 'https://twitter.com/mauglibot', // Twitter link
-  }, // Contacts displayed in the footer
-  navLinks: [
-    { key: 'blog', label: '', href: '/' }, // Blog main page
-    { key: 'products', label: '', href: '/products' }, // Products page
-    { key: 'projects', label: '', href: '/projects' }, // Projects page
-    { key: 'authors', label: '', href: '/authors' }, // Authors page
-    { key: 'tags', label: '', href: '/tags' }, // Tags page
+  "showOnlyRubricsTags": true,
+  "links": {
+    "products": "/products",
+    "about": "/about",
+    "email": "mailto:info@maugli.cfd",
+    "telegram": "https://t.me/mauglibot",
+    "mastodon": "",
+    "medium": "https://medium.com/@maugli",
+    "bluesky": "",
+    "reddit": "",
+    "linkedin": "https://linkedin.com/company/maugli",
+    "twitter": "https://twitter.com/mauglibot"
+  },
+  "navLinks": [
+    {
+      "key": "blog",
+      "label": "",
+      "href": "/"
+    },
+    {
+      "key": "products",
+      "label": "",
+      "href": "/products"
+    },
+    {
+      "key": "projects",
+      "label": "",
+      "href": "/projects"
+    },
+    {
+      "key": "authors",
+      "label": "",
+      "href": "/authors"
+    },
+    {
+      "key": "tags",
+      "label": "",
+      "href": "/tags"
+    }
   ],
-  defaultLang: 'ru', // Default language code
-  copyright: '© Maugli, 2025. All rights reserved.', // Copyright string
-  pageTitles: {
-    home: 'https://maugli.cfd', // Home page title
-    products: '', // Products page title
-    authors: '', // Authors page title
-    tags: '' // Tags page title
+  "defaultLang": "ru",
+  "copyright": "© Maugli, 2025. All rights reserved.",
+  "pageTitles": {
+    "home": "https://maugli.cfd",
+    "products": "",
+    "authors": "",
+    "tags": ""
   },
-  subscribe: {
-    enabled: false, // Enable subscribe block
-    heading: '', // Subscribe heading
-    mutedText: '', // Subscribe muted text
-    formUrl: 'https://your-form-url.com' // Subscribe form URL
+  "subscribe": {
+    "enabled": false,
+    "heading": "",
+    "mutedText": "",
+    "formUrl": "https://your-form-url.com"
   },
-  defaultAuthorId: 'default-autor', // Default author id (used if no author is specified). Use the filename of the author .md file without the .md extension
-  showAuthorsWithoutArticles: true, // Show authors without articles (default: true)
-  showAuthorArticleCount: true, // Show article count for author
-  showLangSwitcher: true, // Show language switcher
-  langLinks: {
-    ru: 'https://blogru.maugli.cfd', // Russian version
-    en: 'https://blog.maugli.cfd', // English version
-    es: 'https://maugli.cfd/es', // Spanish version
-    de: 'https://maugli.cfd/de', // German version
-    pt: '', // Portuguese version
-    fr: '', // French version
-    zh: '', // Chinese version
-    ja: '', // Japanese version
+  "defaultAuthorId": "default-autor",
+  "showAuthorsWithoutArticles": true,
+  "showAuthorArticleCount": true,
+  "showLangSwitcher": true,
+  "langLinks": {
+    "ru": "https://blogru.maugli.cfd",
+    "en": "https://blog.maugli.cfd",
+    "es": "https://maugli.cfd/es",
+    "de": "https://maugli.cfd/de",
+    "pt": "",
+    "fr": "",
+    "zh": "",
+    "ja": ""
   },
-  authorsDescription: '', // Authors block description (override localization)
-  indexTitle: 'Maugli Blog', // Custom title for index page
-  isProTemplate: false, // Is this a pro template
-  secretKey: '0000-0000-0000-0000-0000', // Secret key for pro features
+  "authorsDescription": "",
+  "indexTitle": "Maugli Блог",
+  "isProTemplate": false,
+  "secretKey": "0000-0000-0000-0000-0000",
+  "pwa": {
+    "themeColor": "#0cbf11",
+    "backgroundColor": "#ffffff",
+    "icons": [
+      {
+        "src": "/icon-192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/icon-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  },
+  "repository": {
+    "url": "https://github.com/dashapps/blogru-maugli",
+    "netlifyEnabled": true
+  }
 };
