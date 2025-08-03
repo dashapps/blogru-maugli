@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+.pnpm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Build outputs
+dist/
+.astro/
+
+# Generated files
+.DS_Store
+.vscode/settings.json
+
+# Cache
+.typograf-cache.json
