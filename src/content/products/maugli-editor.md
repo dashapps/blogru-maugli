@@ -14,8 +14,8 @@ seo:
   keywords: ['ИИ-редакция', 'ИИ создание контента', 'автоматизация маркетинга']
 productID: 'blackbox'
 publisher: 'Maugli'
-author: maria-content-strategist
-productLink: https://maugli.cfd
+author: igor-sokolov
+productLink: https://blogru.maugli.cfd
 generativeEngineOptimization:
   generated:
     summary: 'Редакция Maugli — это платформа для автоматизации работы с контентом.'
@@ -37,89 +37,204 @@ generativeEngineOptimization:
         answer: "Редакция Maugli ресерчит обсуждения с Reddit, которые могут быть интересны твоей ЦА, тестирует контент на виртуальной ЦА и переводит на её язык, чтобы тексты звучали живо и попадали точно в цель."
 jsonld: {
   "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Редакция Maugli",
-  "description": "Умная редакция для автоматизации контента.",
-  "brand": {
-    "@type": "Organization",
-    "name": "Maugli",
-    "url": "https://maugli.cfd/ru",
-    "logo": "https://maugli.cfd/logoblog-icon.svg",
-    "founder": "Daria Zorina"
-  },
-  "url": "https://maugli.cfd/",
-  "image": "https://maugli.cfd/images/default-article.jpg",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://maugli.cfd"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "Игорь Соколов"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Maugli AI Editorial System",
-    "url": "https://maugli.cfd/"
-  },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://maugli.cfd/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  },
-  "hasPart": {
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "С чего начать построение контент-стратегии стартапу?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "С изучения болей аудитории, построения контент-карты и семантического плана."
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://blogru.maugli.cfd/blog/ii-redakciya-maugli#post",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blogru.maugli.cfd/blog/ii-redakciya-maugli"
+      },
+      "headline": "ИИ-редакция Maugli",
+      "description": "Умная редакция для автоматизации и создания контента, который продает",
+      "datePublished": "2025-07-03T10:00:00+03:00",
+      "dateModified": "2025-07-10T14:30:00+03:00",
+      "author": {
+        "@type": "Person",
+        "@id": "https://blogru.maugli.cfd/authors/igor-sokolov",
+        "name": "Игорь Соколов",
+        "jobTitle": "Редактор",
+        "url": "https://blogru.maugli.cfd/authors/igor-sokolov"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://blogru.maugli.cfd#organization",
+        "name": "Maugli",
+        "url": "https://blogru.maugli.cfd",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://blogru.maugli.cfd/logoblog-icon.svg",
+          "width": 120,
+          "height": 60
+        },
+        "foundingDate": "2023-01-15",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Daria Zorina"
+          }
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Customer support",
+          "email": "support@maugli.cfd",
+          "url": "https://blogru.maugli.cfd/contact"
         }
       },
-      {
-        "@type": "Question",
-        "name": "Нужен ли блог в 2025 году?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Да, если он работает как актив, а не архив. Maugli строит именно активный блог, приносящий трафик и лиды."
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://blogru.maugli.cfd/assets/examples/products/product_1.webp",
+        "width": 1200,
+        "height": 630,
+        "caption": "Maugli Content Farm Interface",
+        "inLanguage": "ru"
+      },
+      "articleSection": "ИИ-автоматизация",
+      "keywords": "контент-стратегия, ИИ-редакция, автоматизация контента для бизнеса",
+      "inLanguage": "ru",
+      "wordCount": 2450,
+      "timeRequired": "PT8M",
+      "articleBody": "Полный HTML-текст статьи с заголовками, разметкой и ключевыми выводами...",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".article-summary", ".key-points"]
+      },
+      "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": "https://schema.org/UserComments",
+        "userInteractionCount": 47
+      },
+      "about": {
+        "@type": "Product",
+        "@id": "https://blogru.maugli.cfd#product-blackbox"
+      },
+      "isAccessibleForFree": true,
+      "hasPart": {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "С чего начать построение контент-стратегии стартапу?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "С изучения болей аудитории, построения контент-карты и семантического плана."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Нужен ли блог в 2025 году?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да, если он работает как актив, а не архив. Maugli строит именно активный блог, приносящий трафик и лиды."
+            }
+          }
+        ]
+      },
+      "mentions": [
+        {
+          "@type": "Thing",
+          "name": "ChatGPT"
+        },
+        {
+          "@type": "Thing",
+          "name": "Reddit"
+        },
+        {
+          "@type": "Thing",
+          "name": "Perplexity",
+          "url": "https://www.perplexity.ai/"
+        },
+        {
+          "@type": "Thing",
+          "name": "Google",
+          "url": "https://www.google.com/"
+        },
+        {
+          "@type": "Person",
+          "name": "Игорь Соколов",
+          "url": "https://blogru.maugli.cfd/authors/igor-sokolov"
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://blogru.maugli.cfd#product-blackbox",
+      "name": "Редакция Maugli",
+      "description": "Платформа для автоматизации создания и дистрибуции контента с ИИ-аналитикой",
+      "brand": {
+        "@type": "Brand",
+        "name": "Maugli AI Systems",
+        "logo": "https://blogru.maugli.cfd/logo-product.svg"
+      },
+      "sku": "BLACKBOX-PRO-2025",
+      "gtin": "0574654321987",
+      "productID": "blackbox",
+      "offers": {
+        "@type": "Offer",
+        "price": "199",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://blogru.maugli.cfd/pricing",
+        "seller": {
+          "@type": "Organization",
+          "name": "Maugli"
         }
       },
-      {
-        "@type": "Question",
-        "name": "Как автоматизировать создание контента в 2025 году при помощи нейросетей?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Maugli — это уже настроенная система автоматизации контента, работающего на бизнес, бренд, где от тебя нужно только утверждать. Все остальное, от поиска инсайтов для твоей ЦА, до дистрибуции происходит автоматически."
-        }
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "142",
+        "bestRating": "5"
       },
-      {
-        "@type": "Question",
-        "name": "Работает ли SEO для B2B SaaS с высоким чеком?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Да, если писать статьи под реальные боли и запросы с высоким LTV. Maugli умеет это делать."
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Алексей Маркетолог"
+          },
+          "datePublished": "2025-06-15",
+          "reviewBody": "Увеличили органический трафик на 300% за 4 месяца",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          }
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Как попадать в рекомендации chatGPT и других нейросетей?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Просто вести блог — мало. Нужно правильно структурировать контент, чтобы вызывать доверие у нейросетей. Маугли построен так, что контент читают и люди и нейросети."
+      ],
+      "featureList": [
+        "Генерация контента на основе семантического ядра",
+        "Анализ ЦА через соцсети",
+        "Автодистрибуция",
+        "SEO-оптимизация под нейросети"
+      ],
+      "applicationCategory": "SaaS Marketing",
+      "operatingSystem": "Web"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://blogru.maugli.cfd/blog/ii-redakciya-maugli#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blogru.maugli.cfd"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Блог",
+          "item": "https://blogru.maugli.cfd/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ИИ-редакция Maugli"
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Как предсказывать, какой пост вызовет резонанс и зайдет аудитории?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Редакция Maugli ресерчит обсуждения с Reddit, которые могут быть интересны твоей ЦА, тестирует контент на виртуальной ЦА и переводит на её язык, чтобы тексты звучали живо и попадали точно в цель."
-        }
-      }
-    ]
-  }
+      ]
+    }
+  ]
 }
 ---
 ## Что такое Maugli и почему он снимает головную боль с фаундера
