@@ -5,7 +5,7 @@ excerpt: >-
   и почему Maugli Editorial System решает задачу автоматически
 publishDate: 2025-07-20T00:00:00.000Z
 isFeatured: false
-author: dmitry-growth-marketer
+author: igor-sokolov
 tags:
   - SEO & AI SEO
   - JSON-LD

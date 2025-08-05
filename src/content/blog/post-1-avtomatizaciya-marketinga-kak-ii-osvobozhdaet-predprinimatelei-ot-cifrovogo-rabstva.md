@@ -5,7 +5,7 @@ excerpt: >-
   цифрового рабства с помощью автоматизации маркетинга!
 publishDate: 2025-05-14T00:00:00.000Z
 isFeatured: false
-author: dmitry-growth-marketer
+author: daria-zorina
 tags:
   - Автоматизация бизнеса
 seo:
