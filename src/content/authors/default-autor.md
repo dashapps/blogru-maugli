@@ -30,7 +30,7 @@ jsonld:
   name: 'Default Author'
   jobTitle: 'Editor-in-Chief'
   url: 'https://maugli.cfd'
-  image: 'src/img/default/autor_default.webp'
+  image: '/assets/img/default/autor_default.webp'
   sameAs:
     - 'https://t.me/mauglibot'
     - 'https://www.linkedin.com/company/maugli'
@@ -42,5 +42,5 @@ jsonld:
     - 'https://facebook.com/maugli'
 
 isExample: true
-
+---
 This author is used by default for all posts if no custom author is specified.
