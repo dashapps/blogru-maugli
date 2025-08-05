@@ -151,11 +151,11 @@ export const maugliConfig: MaugliConfig = {
       }
     }
   },
-  "defaultBlogImage": "src/assets/img/default/blog_default.webp",
-  "defaultProductImage": "src/assets/img/default/product_default.webp",
-  "defaultProjectImage": "src/assets/img/default/project_default.webp",
-  "defaultAuthorImage": "src/assets/img/default/autor_default.webp",
-  "defaultRubricImage": "src/assets/img/default/rubric_default.webp",
+  "defaultBlogImage": "/assets/img/default/blog_default.webp",
+  "defaultProductImage": "/assets/img/default/product_default.webp",
+  "defaultProjectImage": "/assets/img/default/project_default.webp",
+  "defaultAuthorImage": "/assets/img/default/autor_default.webp",
+  "defaultRubricImage": "/assets/img/default/rubric_default.webp",
   "features": {
     "enableSubscribe": true,
     "enableMultiLang": false,

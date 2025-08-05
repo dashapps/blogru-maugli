@@ -2,7 +2,7 @@
 name: 'Default Author'
 position: 'Editor-in-Chief'
 description: 'Default author and content editor for Maugli Blog. Used by default when no custom author is configured.'
-avatar: 'src/img/default/autor_default.webp'
+avatar: '/assets/img/default/autor_default.webp'
 socials:
   telegram: 'https://t.me/mauglibot'
   linkedin: 'https://www.linkedin.com/company/maugli'
@@ -21,7 +21,7 @@ seo:
     - AI content
     - SEO
   image:
-    src: 'src/img/default/autor_default.webp'
+    src: '/assets/img/default/autor_default.webp'
     alt: 'Default Author'
     caption: 'Default editor of Maugli Blog'
 jsonld:
@@ -42,6 +42,5 @@ jsonld:
     - 'https://facebook.com/maugli'
 
 isExample: true
----
 
 This author is used by default for all posts if no custom author is specified.
