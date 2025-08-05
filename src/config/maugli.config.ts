@@ -1,5 +1,5 @@
 // MAUGLI_CONFIG_VERSION — config version for CLI/automation compatibility
-export const MAUGLI_CONFIG_VERSION = '0.3';
+export const MAUGLI_CONFIG_VERSION = '0.1';
 // Main configuration interface for the Maugli project
 export interface MaugliConfig {
   // Show example/demo content (for CLI/empty blog setup)
@@ -18,11 +18,6 @@ export interface MaugliConfig {
     farmRubricIds?: string[];    // Array of farm rubric IDs for API
     farmProductIds?: string[];   // Array of farm product IDs for API
     farmProjectIds?: string[];   // Array of farm project/case IDs for API
-  };
-  // Repository settings for deployment
-  repository?: {
-    url?: string; // User's repository URL for Netlify deployment button
-    netlifyEnabled?: boolean; // Enable Netlify deployment button (default: true)
   };
   // Brand and logo settings
   brand: {
@@ -53,12 +48,6 @@ export interface MaugliConfig {
     enableMultiLang: boolean; // Enable multilingual support
     enableFAQ: boolean; // Enable FAQ block
     enableRSS: boolean; // Enable RSS feed
-  };
-  // Progressive Web App settings
-  pwa?: {
-    themeColor?: string; // Theme color for the PWA manifest
-    backgroundColor?: string; // Background color for the PWA manifest
-    icons?: Array<{ src: string; sizes: string; type: string; purpose?: string }>; // Icons for the PWA manifest
   };
   // Control display of tags/rubrics
   // Theme switcher
@@ -93,7 +82,7 @@ export interface MaugliConfig {
 }
 // Main exported configuration object for the Maugli project
 export const maugliConfig: MaugliConfig = {
-  "configVersion": "0.3",
+  "configVersion": "0.1",
   "showExamples": true,
   "brand": {
     "name": "Maugli",
