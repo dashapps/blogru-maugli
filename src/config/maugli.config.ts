@@ -99,7 +99,7 @@ export const maugliConfig: MaugliConfig = {
     "name": "Maugli",
     "description": "Content farm for smart automation",
     "logoLight": "/logoblog-icon.svg",
-    "logoHref": "https://maugli.cfd",
+    "logoHref": "https://maugli.cfd/ru",
     "logoBreadcrumbsLight": "/logo-icon.svg"
   },
   "automation": {
@@ -155,7 +155,7 @@ export const maugliConfig: MaugliConfig = {
   "defaultProductImage": "/assets/img/default/product_default.webp",
   "defaultProjectImage": "/assets/img/default/project_default.webp",
   "defaultAuthorImage": "/assets/img/default/autor_default.webp",
-  "defaultRubricImage": "/assets/img/default/rubric_default.webp",
+  "defaultRubricImage": "/img/default/rubric_default.webp",
   "features": {
     "enableSubscribe": true,
     "enableMultiLang": false,
@@ -216,7 +216,7 @@ export const maugliConfig: MaugliConfig = {
     "mutedText": "",
     "formUrl": "https://your-form-url.com"
   },
-  "defaultAuthorId": "default-autor",
+  "defaultAuthorId": "igor-sokolov",
   "showAuthorsWithoutArticles": true,
   "showAuthorArticleCount": true,
   "showLangSwitcher": true,
