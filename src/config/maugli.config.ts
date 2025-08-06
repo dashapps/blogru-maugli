@@ -1,5 +1,5 @@
 // MAUGLI_CONFIG_VERSION — config version for CLI/automation compatibility
-export const MAUGLI_CONFIG_VERSION = '0.4';
+export const MAUGLI_CONFIG_VERSION = '0.5';
 // Main configuration interface for the Maugli project
 export interface MaugliConfig {
   // Show example/demo content (for CLI/empty blog setup)
@@ -18,11 +18,30 @@ export interface MaugliConfig {
     farmRubricIds?: string[];    // Array of farm rubric IDs for API
     farmProductIds?: string[];   // Array of farm product IDs for API
     farmProjectIds?: string[];   // Array of farm project/case IDs for API
+    forceUpdate?: boolean;       // Force updates without Y/n prompts (default: false)
   };
   // Repository settings for deployment
   repository?: {
     url?: string; // User's repository URL for Netlify deployment button
     netlifyEnabled?: boolean; // Enable Netlify deployment button (default: true)
+  };
+  // Netlify deployment configuration
+  netlify?: {
+    autoUpdate?: boolean; // Enable auto-update on Netlify (default: true)
+    plugins?: string[]; // Netlify plugins to install
+    buildCommand?: string; // Custom build command for Netlify
+    publishDir?: string; // Publish directory (default: "dist")
+    environment?: Record<string, string>; // Environment variables for Netlify
+    redirects?: Array<{
+      from: string;
+      to: string;
+      status?: number;
+      force?: boolean;
+    }>; // Custom redirects
+    headers?: Array<{
+      for: string;
+      values: Record<string, string>;
+    }>; // Custom headers
   };
   // Brand and logo settings
   brand: {
@@ -94,7 +113,7 @@ export interface MaugliConfig {
 }
 // Main exported configuration object for the Maugli project
 export const maugliConfig: MaugliConfig = {
-  "configVersion": "0.4",
+  "configVersion": "0.5",
   "showExamples": true,
   "brand": {
     "name": "Maugli",
@@ -109,7 +128,8 @@ export const maugliConfig: MaugliConfig = {
     "farmAuthorIds": [],
     "farmRubricIds": [],
     "farmProductIds": [],
-    "farmProjectIds": []
+    "farmProjectIds": [],
+    "forceUpdate": true
   },
   "enableThemeSwitcher": true,
   "seo": {
@@ -256,5 +276,54 @@ export const maugliConfig: MaugliConfig = {
     "url": "https://github.com/dashapps/blogru-maugli",
     "netlifyEnabled": true
   },
-  "defaultTheme": "dark"
+  "defaultTheme": "dark",
+  "netlify": {
+    "autoUpdate": true,
+    "plugins": [
+      "@netlify/plugin-lighthouse",
+      "netlify-plugin-submit-sitemap",
+      "netlify-plugin-checklinks",
+      "netlify-plugin-image-optim",
+      "netlify-plugin-minify-html",
+      "netlify-plugin-inline-critical-css",
+      "netlify-plugin-hashfiles",
+      "netlify-plugin-bluesky-custom-domain",
+      "netlify-plugin-supabase"
+    ],
+    "buildCommand": "npm run build",
+    "publishDir": "dist",
+    "environment": {
+      "NODE_VERSION": "18",
+      "NPM_FLAGS": "--legacy-peer-deps"
+    },
+    "redirects": [
+      {
+        "from": "/blog/feed.xml",
+        "to": "/rss.xml",
+        "status": 301
+      }
+    ],
+    "headers": [
+      {
+        "for": "/*",
+        "values": {
+          "X-Frame-Options": "DENY",
+          "X-Content-Type-Options": "nosniff",
+          "Referrer-Policy": "strict-origin-when-cross-origin"
+        }
+      },
+      {
+        "for": "/img/*",
+        "values": {
+          "Cache-Control": "public, max-age=31536000, immutable"
+        }
+      },
+      {
+        "for": "/*.webp",
+        "values": {
+          "Cache-Control": "public, max-age=31536000, immutable"
+        }
+      }
+    ]
+  }
 };
