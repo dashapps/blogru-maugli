@@ -3,6 +3,7 @@ title: Maugli Content Farms
 description: ИИ-редакция полного цикла для создания контента блогов, телеграм-каналов и соцсетей
 publishDate: '2025-05-11'
 tags: ['ИИ', 'Автоматизация', 'Контент', 'Мауgли']
+author: igor-sokolov
 productID: 'blackbox'
 productLink: 'https://google.com'
 generativeEngineOptimization:
@@ -22,13 +23,12 @@ generativeEngineOptimization:
         answer: 'Да, система создает контент в соответствии с заданной тональностью и может писать от лица конкретного персонажа.'
 seo:
   image:
-    src: '/assets/examples/projects/project_1.webp'
+    src: '/img/vyybor_frameworka_dlya_bloga_v_25godu.webp'
     alt: Смотреть
     width: '1200'
     height: '630'
 isExample: true
 ---
-
 ## Что такое Maugli
 
 Маугли —это решение для автоматизации создания контента с помощью AI

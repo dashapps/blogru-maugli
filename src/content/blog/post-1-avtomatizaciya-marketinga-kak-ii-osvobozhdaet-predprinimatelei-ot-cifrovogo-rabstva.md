@@ -21,7 +21,7 @@ seo:
     - нейросети в предпринимательстве
     - освобождение от рутины
   image:
-    src: /assets/examples/blog/post_11.webp
+    src: /img/ideal_blog_for_automation.webp
     alt: >-
       Автоматизация маркетинга: как ИИ освобождает предпринимателей от цифрового
       рабства

@@ -3,22 +3,22 @@ title: 'ИИ-редакция Maugli'
 description: 'Умная редакция для автоматизации и создания контента, который продает'
 publishDate: 2025-07-03
 updatedDate: 2025-07-10
-isFeatured: false
+isFeatured: true
 tags: ['контент-стратегия', 'ИИ-редакция', 'автоматизация контента дляя бизнеса']
 image:
-  src: '/assets/examples/products/product_1.webp'
+  src: '/img/editorial_product.webp'
   alt: 'Maugli Content Farm'
 seo:
-  title: 'Редакция Maugli — умная платформа для контента'
-  description: 'Редакция Maugli — платформа для автоматизации, создания и публикации контента'
+  title: 'Редакция Maugli — умная платформа для создания и публикации контента'
+  description: 'Редакция Maugli — платформа для автоматизации, создания и публикации контента, который выполняет бизнес-задачи'
   keywords: ['ИИ-редакция', 'ИИ создание контента', 'автоматизация маркетинга']
 productID: 'blackbox'
 publisher: 'Maugli'
 author: igor-sokolov
-productLink: https://blogru.maugli.cfd
+productLink: https://maugli.cfd/ru
 generativeEngineOptimization:
   generated:
-    summary: 'Редакция Maugli — это платформа для автоматизации работы с контентом.'
+    summary: 'Редакция Maugli — это ИИ редакция полного цикла, самостоятельно решающая задачи бизнеса. От ресерча виральных тем до публикаций в блоге и соцсетях.'
     highlights:
       - 'Контент-стратегия'
       - 'ИИ-автоматизация'

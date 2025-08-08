@@ -5,6 +5,9 @@ publishDate: 2024-01-01
 updatedDate: 2024-01-01
 isFeatured: false
 tags: ['demo', 'example']
+image:
+  src: '/img/free_automation.webp'
+  alt: 'Maugli Content Farm'
 seo:
   title: 'Example Product'
   description: 'Demo product for showcase purposes.'
@@ -24,5 +27,4 @@ generativeEngineOptimization:
 jsonld: {}
 isExample: true
 ---
-
 This is a demo product. You can safely remove or hide it by setting showExamples: false in maugliConfig.
