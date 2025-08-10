@@ -1,12 +1,12 @@
 #!/usr/bin/env nconst CURRENT_VERSION = '1.2.48';onst CURRENT_VERSION = '1.2.46';de
 
 /**
- * Скрипт для централизованного обновления всех блогов до последней версии core-maugli
+ * Script for centralized updating of all blogs to the latest core-maugli version
  * 
- * Использование:
- * node scripts/update-all-blogs.js [путь_к_проекту]
+ * Usage:
+ * node scripts/update-all-blogs.js [project_path]
  * 
- * Или для множественного обновления:
+ * Or for multiple updates:
  * node scripts/update-all-blogs.js /path/to/blogs/project1 /path/to/blogs/project2
  */
 
@@ -15,7 +15,7 @@ import path from 'path';
 
 const CURRENT_VERSION = '1.2.44';
 
-// Правильные скрипты для package.json
+// Correct scripts for package.json
 const CORRECT_SCRIPTS = {
     "typograf": "node typograf-batch.js",
     "dev": "node resize-all.cjs && node scripts/generate-previews.js && astro dev",
@@ -43,7 +43,7 @@ const CORRECT_SCRIPTS = {
     "generate-previews": "node scripts/generate-previews.js"
 };
 
-// Файлы скриптов, которые нужно скопировать
+// Script files that need to be copied
 const REQUIRED_SCRIPTS = [
     'scripts/flatten-images.cjs',
     'scripts/optimize-images.cjs',
@@ -97,20 +97,20 @@ function updateBlogProject(projectPath) {
     log(`Updating project: ${absolutePath}`, 'info');
     
     try {
-        // 1. Читаем package.json
+        // 1. Read package.json
         const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
         
-        // 2. Проверяем, что это проект core-maugli
+        // 2. Check that this is a core-maugli project
         if (packageJson.name !== 'core-maugli') {
             log(`Skipping: not a core-maugli project (${packageJson.name})`, 'warning');
             return false;
         }
         
-        // 3. Обновляем версию
+        // 3. Update version
         const oldVersion = packageJson.version;
         packageJson.version = CURRENT_VERSION;
         
-        // 4. Обновляем скрипты
+        // 4. Update scripts
         let scriptsUpdated = false;
         for (const [scriptName, scriptValue] of Object.entries(CORRECT_SCRIPTS)) {
             if (packageJson.scripts[scriptName] !== scriptValue) {
@@ -119,10 +119,10 @@ function updateBlogProject(projectPath) {
             }
         }
         
-        // 5. Сохраняем package.json
+        // 5. Save package.json
         fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 4));
         
-        // 6. Копируем недостающие скрипты
+        // 6. Copy missing scripts
         const scriptsDir = path.join(absolutePath, 'scripts');
         if (!fs.existsSync(scriptsDir)) {
             fs.mkdirSync(scriptsDir, { recursive: true });

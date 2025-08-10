@@ -6,21 +6,21 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Универсальное определение корня проекта
+// Universal project root detection
 const rootDir = __dirname.includes('node_modules')
   ? path.join(__dirname, '../../..')
   : path.join(__dirname, '..');
 
-// Размеры для разных типов контента
+// Sizes for different content types
 const blogPreviewWidth = 400;
 const blogPreviewHeight = 210;
 const rubricPreviewWidth = 210;
 const rubricPreviewHeight = 214;
 
-// Генерируем в dist вместо public
+// Generate in dist instead of public
 const outputDir = path.join(rootDir, 'dist');
 
-// Функция для создания превью в dist
+// Function to create preview in dist
 async function createPreviewForBuild(sourcePath, outputPath, width, height) {
   const previewDir = path.dirname(outputPath);
   if (!fs.existsSync(previewDir)) {
@@ -28,20 +28,20 @@ async function createPreviewForBuild(sourcePath, outputPath, width, height) {
   }
 
   if (fs.existsSync(outputPath)) {
-    return; // Превью уже существует
+    return; // Preview already exists
   }
 
   try {
     await sharp(sourcePath)
       .resize(width, height, { fit: 'cover' })
       .toFile(outputPath);
-    console.log(`✅ Превью создано: ${path.relative(rootDir, outputPath)}`);
+    console.log(`✅ Preview created: ${path.relative(rootDir, outputPath)}`);
   } catch (error) {
-    console.error(`❌ Ошибка при создании превью ${outputPath}:`, error.message);
+    console.error(`❌ Error creating preview ${outputPath}:`, error.message);
   }
 }
 
-// Функция для обработки папки
+// Function to process directory
 async function processDirectory(sourceDir, outputSubDir) {
   if (!fs.existsSync(sourceDir)) {
     return;
@@ -54,17 +54,17 @@ async function processDirectory(sourceDir, outputSubDir) {
     const stat = fs.statSync(sourcePath);
     
     if (stat.isDirectory()) {
-      if (item === 'previews') continue; // Пропускаем папки превью
+      if (item === 'previews') continue; // Skip preview folders
       await processDirectory(sourcePath, path.join(outputSubDir, item));
     } else if (item.match(/\.(webp|jpg|jpeg|png)$/i)) {
       const ext = path.extname(item);
       const name = path.basename(item, ext);
       
-      // Пропускаем файлы, которые уже содержат размер
+      // Skip files that already contain size suffix
       const hasResizeSuffix = [400, 800, 1200].some(size => name.includes(`-${size}`));
       if (hasResizeSuffix) continue;
       
-      // Определяем размер превью
+      // Determine preview size
       let previewWidth, previewHeight;
       if (sourcePath.includes('/img/default/') && (name.includes('rubric') || name.includes('tag'))) {
         previewWidth = rubricPreviewWidth;
@@ -74,11 +74,11 @@ async function processDirectory(sourceDir, outputSubDir) {
         previewHeight = blogPreviewHeight;
       }
       
-      // Создаем превью
+      // Create preview
       const outputDir = path.join(rootDir, 'dist', outputSubDir, 'previews');
       const outputPath = path.join(outputDir, `${name}${ext}`);
       
-      console.log(`🎭 Создаем превью для сборки: ${name}`);
+      console.log(`🎭 Creating preview for build: ${name}`);
       await createPreviewForBuild(sourcePath, outputPath, previewWidth, previewHeight);
     }
   }

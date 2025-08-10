@@ -43,25 +43,166 @@ generativeEngineOptimization:
         answer: 'Да, но он также готов к полностью автоматическому или полуавтоматическому постингу.'
       - question: 'Поддерживает ли блог мультиязычность?'
         answer: 'Да, до 8 языков интерфейса.'
-jsonld:
-  '@context': 'https://schema.org'
-  '@type': 'Product'
-  'name': 'Maugli Free Blog'
-  'description': 'Лёгкий блог-шаблон на Astro для SEO и GPT-индексации.'
-  'image': '/assets/examples/products/product_2.webp'
-  'brand':
-    '@type': 'Organization'
-    'name': 'Maugli'
-  'offers':
-    '@type': 'Offer'
-    'priceCurrency': 'USD'
-    'price': '0'
-    'url': 'https://www.npmjs.com/package/core-maugli'
-
 isExample: true
----
-> Мы сделали шаблон Maugli FreeBlog с одной целью — дать возможность запускать лёгкие, SEO-оптимизированные AI-блоги буквально за один клик. Даже агентам и соло-фаундерам без технической подготовки. 
 
+jsonld:
+  "@context": "https://schema.org"
+  "@graph":
+    - "@type": "Organization"
+      "@id": "https://maugli.cfd#org"
+      name: "Maugli"
+      url: "https://maugli.cfd"
+      logo:
+        "@type": "ImageObject"
+        "@id": "https://maugli.cfd/img/maugli-logo.svg#logo"
+        url: "https://maugli.cfd/img/maugli-logo.svg"
+        width: 512
+        height: 512
+        caption: "Логотип Maugli"
+      sameAs:
+        - "https://www.npmjs.com/package/core-maugli"
+        - "https://github.com/dashapps/blogru-maugli"
+        - "https://blogru.maugli.cfd"
+
+    - "@type": "WebPage"
+      "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/"
+      url: "https://blogru.maugli.cfd/products/maugli-freeblog/"
+      name: "Maugli Free Blog — Astro-шаблон для AI-блогов"
+      inLanguage: ["ru"]
+      breadcrumb: { "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/#breadcrumbs" }
+      primaryImageOfPage: { "@id": "https://maugli.cfd/img/freeblog_product.webp#image" }
+      hasPart:
+        - { "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/#howto-install" }
+        - { "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/#faq" }
+      about: { "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/#product" }
+      dateModified: "2025-08-10"
+
+    - "@type": "Product"
+      "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/#product"
+      url: "https://blogru.maugli.cfd/products/maugli-freeblog/"
+      mainEntityOfPage: { "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/" }
+      name: "Maugli Free Blog"
+      alternateName: ["Maugli FreeBlog", "Maugli Astro Blog Template"]
+      inLanguage: ["ru"]
+      description: "Лёгкий Astro-шаблон для AI-блогов: SEO, JSON-LD, мультиязычность, мультиблог. Совместим с GPT-пайплайнами. Разворачивается за 5 минут, автоматизируется за 20."
+      category: ["Static site","Blog","AI content automation"]
+      keywords: ["Astro","AI blog","GPT","JSON-LD","SEO","multilingual blog","automation","Maugli"]
+      image: { "@id": "https://maugli.cfd/img/freeblog_product.webp#image" }
+      brand: { "@id": "https://maugli.cfd#org" }
+      manufacturer: { "@id": "https://maugli.cfd#org" }
+      publisher: { "@id": "https://maugli.cfd#org" }
+      sameAs:
+        - "https://www.npmjs.com/package/core-maugli"
+        - "https://github.com/dashapps/blogru-maugli"
+        - "https://blogru.maugli.cfd"
+      isRelatedTo: { "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/#app" }
+      hasOfferCatalog: { "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/#catalog" }
+      potentialAction:
+        - "@type": "InstallAction"
+          target: "https://www.npmjs.com/package/core-maugli"
+        - "@type": "ReadAction"
+          target: "https://blogru.maugli.cfd/products/maugli-freeblog/"
+
+    - "@type": "ImageObject"
+      "@id": "https://maugli.cfd/img/freeblog_product.webp#image"
+      url: "https://maugli.cfd/img/freeblog_product.webp"
+      contentUrl: "https://maugli.cfd/img/freeblog_product.webp"
+      width: 1920
+      height: 1080
+      caption: "Maugli Free Blog — AI-готовый Astro-шаблон"
+
+    - "@type": "SoftwareApplication"
+      "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/#app"
+      name: "Maugli Free Blog (Astro Template)"
+      applicationCategory: "DeveloperApplication"
+      applicationSuite: "Maugli"
+      operatingSystem: "Any"
+      programmingLanguage: ["Astro","TypeScript"]
+      softwareRequirements: "Node.js 18+, npm или pnpm; Netlify/Vercel по желанию"
+      softwareVersion: "0.5.0"
+      installUrl: "https://www.npmjs.com/package/core-maugli"
+      downloadUrl: "https://www.npmjs.com/package/core-maugli"
+      inLanguage: ["ru"]
+      publisher: { "@id": "https://maugli.cfd#org" }
+
+    - "@type": "OfferCatalog"
+      "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/#catalog"
+      name: "Maugli Free Blog — Offers"
+      itemListElement:
+        - { "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/#offer-free" }
+        - { "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/#offer-whitelabel-lite" }
+        - { "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/#offer-whitelabel-full" }
+
+    - "@type": "Offer"
+      "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/#offer-free"
+      name: "Free (DIY)"
+      price: "0"
+      priceCurrency: "RUB"
+      isAccessibleForFree: true
+      availability: "https://schema.org/InStock"
+      url: "https://blogru.maugli.cfd/products/maugli-freeblog/#free"
+      category: "Free tier"
+
+    - "@type": "Offer"
+      "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/#offer-whitelabel-lite"
+      name: "White-label Lite (lifetime, 1 репозиторий)"
+      price: "5900"
+      priceCurrency: "RUB"
+      availability: "https://schema.org/InStock"
+      url: "https://blogru.maugli.cfd/products/maugli-freeblog/#licensing"
+      category: "Perpetual license (one repository)"
+      description: "Снятие ссылок «by Maugli» и «Created on Maugli». Пожизненная лицензия на один репозиторий."
+
+    - "@type": "Offer"
+      "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/#offer-whitelabel-full"
+      name: "White-label Full (lifetime, 1 репозиторий)"
+      price: "9900"
+      priceCurrency: "RUB"
+      availability: "https://schema.org/InStock"
+      url: "https://blogru.maugli.cfd/products/maugli-freeblog/#licensing"
+      category: "Perpetual license (one repository)"
+      description: "Полное снятие всех лейблов, включая npm-атрибуцию. Пожизненная лицензия на один репозиторий."
+
+    - "@type": "HowTo"
+      "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/#howto-install"
+      name: "Установка за 5 минут"
+      inLanguage: "ru"
+      totalTime: "PT5M"
+      supply: [{ "@type": "HowToSupply", name: "Node.js 18+ и npm/pnpm" }]
+      tool:   [{ "@type": "HowToTool",   name: "Терминал/CLI" }]
+      step:
+        - { "@type": "HowToStep", name: "Установка шаблона", text: "npm i core-maugli" }
+        - { "@type": "HowToStep", name: "Инициализация проекта", text: "npx maugli init (или настройка вручную)" }
+        - { "@type": "HowToStep", name: "Локальный запуск", text: "npm run dev и открой http://localhost:4321" }
+        - { "@type": "HowToStep", name: "Деплой", text: "Подключи репо к Netlify/Vercel и запусти билд" }
+      isPartOf: { "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/" }
+      about:   { "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/#product" }
+
+    - "@type": "FAQPage"
+      "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/#faq"
+      inLanguage: "ru"
+      mainEntity:
+        - "@type": "Question"
+          name: "Нужен ли блог в 2025 году?"
+          acceptedAnswer: { "@type": "Answer", text: "Да, если это актив: Maugli строит блог, который даёт трафик и лиды, а не архив постов." }
+        - "@type": "Question"
+          name: "Чем это лучше обычных тем?"
+          acceptedAnswer: { "@type": "Answer", text: "Это каркас под автоматизацию: интеграции с ботами, JSON-LD, публикация без разработчика." }
+        - "@type": "Question"
+          name: "Чем отличается White-label Lite от Full?"
+          acceptedAnswer: { "@type": "Answer", text: "Lite снимает «by Maugli» и «Created on Maugli»; Full убирает всю атрибуцию, включая npm. Обе лицензии пожизненные, на один репозиторий." }
+      isPartOf: { "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/" }
+      about:    { "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/#product" }
+
+    - "@type": "BreadcrumbList"
+      "@id": "https://blogru.maugli.cfd/products/maugli-freeblog/#breadcrumbs"
+      itemListElement:
+        - { "@type": "ListItem", position: 1, name: "Главная", item: "https://blogru.maugli.cfd/" }
+        - { "@type": "ListItem", position: 2, name: "Продукты", item: "https://blogru.maugli.cfd/products/" }
+        - { "@type": "ListItem", position: 3, name: "Maugli Free Blog", item: "https://blogru.maugli.cfd/products/maugli-freeblog/" }
+---
+
+> Мы сделали шаблон Maugli FreeBlog с одной целью — дать возможность запускать лёгкие, SEO-оптимизированные AI-блоги буквально за один клик. Даже агентам и соло-фаундерам без технической подготовки.
 
 Чтобы можно было:
 
@@ -69,7 +210,7 @@ isExample: true
 - кастомизировать внешний вид под бренд;
 - и при этом получить систему, совместимую с AI-редакторами и GPT-пайплайнами.
 
-> Компоненты в шаблоне обновляются централизованно — чтобы поддерживать стабильность и не возиться с поддержкой. 
+> Компоненты в шаблоне обновляются централизованно — чтобы поддерживать стабильность и не возиться с поддержкой.
 
 Если нужно — можно отключить автообновления и править всё вручную. Но философия Maugli — всё работает из коробки, быстро и гибко, без необходимости в технарях.
 
@@ -98,7 +239,7 @@ isExample: true
 
 > 🛠️ **Подробный обзор для технарей**
 >
->  [Подробно разобрали](#) *(вставим ссылку после публикации поста)*, как работает шаблон, как его кастомизировать и как автоматизировать.
+> [Подробно разобрали](#) *(вставим ссылку после публикации поста)*, как работает шаблон, как его кастомизировать и как автоматизировать.
 
 ---
 
