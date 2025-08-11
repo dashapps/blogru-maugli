@@ -20,7 +20,7 @@ const faqCard = (dict as any).faqCard || (fallbackDict as any).faqCard || {};
 ---
 
 <section
-    class="w-full bg-[var(--bg-muted)] rounded-custom  pl-8 sm:p-8 sm:pl-10 mt-8 mb-4 flex flex-col gap-6 sm:gap-10 overflow-hidden"
+    class="w-full bg-[var(--bg-muted)] rounded-custom pl-8 sm:p-8 sm:pl-10 mt-8 mb-4 flex flex-col gap-6 sm:gap-10 overflow-hidden"
     aria-label={faqCard.ariaLabel || 'Часто задаваемые вопросы'}
 >
     <div class="flex flex-col sm:flex-row pt-1 gap-6 sm:gap-9">
@@ -76,13 +76,13 @@ const faqCard = (dict as any).faqCard || (fallbackDict as any).faqCard || {};
                             </span>
                             {question}
                         </button>
-<div
-    id={`faq-answer-${idx}`}
-    class={`font-sans text-[1.05em] ml-8  faq-answer${idx === 0 ? ' open' : ''}`}
-    style="opacity:0.8;line-height:1.45; color: var(--text-main);"
->
-    {answer}
-</div>
+                        <div
+                            id={`faq-answer-${idx}`}
+                            class={`font-sans text-[1.05em] ml-8  faq-answer${idx === 0 ? ' open' : ''}`}
+                            style="opacity:0.8;line-height:1.45; color: var(--text-main);"
+                        >
+                            {answer}
+                        </div>
                     </div>
                 ))
             }
