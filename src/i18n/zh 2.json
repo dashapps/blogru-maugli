@@ -1,0 +1,133 @@
+{
+  "buttons": {
+    "share": "分享",
+    "subscribe": "订阅",
+    "moreAboutProduct": "更多产品信息",
+    "copied": "已复制！",
+    "copyLink": "复制链接",
+    "copyLinkToArticle": "复制文章链接",
+    "morePosts": "更多文章"
+  },
+  "form": {
+    "emailPlaceholder": "电子邮件",
+    "emailLabel": "电子邮件",
+    "subscribeAriaLabel": "订阅表单"
+  },
+  "ui": {
+    "authorAvatar": "作者头像"
+  },
+  "nav": {
+    "blog": "博客",
+    "products": "产品",
+    "projects": "案例",
+    "authors": "作者",
+    "tags": "主题",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单"
+  },
+  "pages": {
+    "authors": {
+      "title": "作者",
+      "description": "认识为 {brand} 撰稿的专家团队",
+      "goToAuthor": "前往作者",
+      "avatarAlt": "头像",
+      "onPlatform": "在"
+    },
+    "tags": {
+      "title": "分类",
+      "description": "按类别查看所有文章",
+      "blogRubrics": "博客分类",
+      "moreTags": "标签"
+    },
+    "index": {
+      "title": "<博客>",
+      "description": "关于自动化的 AI 视角博客",
+      "articles": "文章",
+      "minutes": "分钟"
+    },
+    "products": {
+      "title": "产品",
+      "description": "所有 Maugli 产品"
+    },
+    "projects": {
+      "tagTitle": "按标签的服务",
+      "title": "服务"
+    },
+    "blog": {
+      "moreByTag": "更多相关主题"
+    },
+    "productsId": {
+      "articlesByTag": "相关文章",
+      "casesByTag": "相关案例"
+    }
+  },
+  "socials": {
+    "email": "电子邮件",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter",
+    "telegram": "Telegram",
+    "reddit": "Reddit",
+    "medium": "Medium",
+    "mastodon": "Mastodon",
+    "bluesky": "Bluesky"
+  },
+  "footer": {
+    "allRightsReserved": "版权所有"
+  },
+  "shareIconAriaLabel": {
+    "twitter": "分享到 Twitter",
+    "copy": "复制链接",
+    "telegram": "分享到 Telegram",
+    "linkedin": "分享到 LinkedIn",
+    "whatsapp": "分享到 WhatsApp",
+    "facebook": "分享到 Facebook",
+    "copied": "链接已复制"
+  },
+  "date": {
+    "today": "今天",
+    "yesterday": "昨天"
+  },
+  "sidebarAriaLabel": "侧边栏",
+  "summaryFAQCard": {
+    "ariaLabel": "摘要和常见问题",
+    "summaryLabel": "摘要：",
+    "faqLabel": "常见问题："
+  },
+  "tableOfContents": {
+    "title": "目录",
+    "ariaLabel": "目录"
+  },
+  "tagPill": {
+    "ariaLabel": "标签：{tag}"
+  },
+  "tagPills": {
+    "ariaLabel": "标签：{name} ({count})"
+  },
+  "tagsSection": {
+    "allCases": "所有案例",
+    "allArticles": "所有文章",
+    "allTags": "所有标签",
+    "rubricAlt": "分类",
+    "tagAriaLabel": "标签：{name} ({count})"
+  },
+  "themeToggle": {
+    "ariaLabel": "切换颜色模式"
+  },
+  "pagination": {
+    "goToPage": "跳转到第 {page} 页，共 {lastPage} 页",
+    "pageOf": "第 {currentPage} 页，共 {lastPage} 页"
+  },
+  "subscribe": {
+    "heading": "订阅更新",
+    "mutedText": "第一时间获取最新文章和新闻！"
+  },
+  "notFound": {
+    "title": "未找到页面",
+    "description": "抱歉，此页面不存在或已被删除。",
+    "button": "返回首页"
+  },
+  
+  "stopWords": [
+    "的", "了", "在", "是", "我", "有", "和", "就", "不", "人", "都", "一", "一个", "上", "也", "很", "到", "说", "要", "去", "你", "会", "着", "没有", "看", "好", "自己", "这", "那", "里", "来", "他", "时候", "过", "出", "多", "么", "于", "她", "手", "可", "家", "学", "只", "以", "主", "会", "样", "年", "想", "生", "同", "老", "中", "十", "从", "面", "听", "女", "儿", "头", "明", "实", "之", "进", "着", "等", "部", "度", "家", "电", "力", "里", "如", "水", "化", "高", "自", "二", "理", "起", "小", "物", "现", "实", "加", "量", "都", "两", "体", "制", "机", "当", "使", "点", "从", "业", "本", "去", "把", "性", "好", "应", "开", "它", "合", "还", "因", "由", "其", "些", "然", "前", "外", "天", "政", "四", "日", "那", "社", "义", "事", "平", "形", "相", "全", "表", "间", "样", "与", "关", "各", "重", "新", "线", "内", "数", "正", "心", "反", "你", "明", "看", "原", "又", "么", "利", "比", "或", "但", "质", "气", "第", "向", "道", "命", "此", "变", "条", "只", "没", "结", "解", "问", "意", "建", "月", "公", "无", "系", "军", "很", "情", "者", "最", "立", "代", "想", "已", "通", "并", "提", "直", "题", "党", "程", "展", "五", "果", "料", "象", "员", "革", "位", "入", "常", "文", "总", "次", "品", "式", "活", "设", "及", "管", "特", "件", "长", "求", "老", "头", "基", "资", "边", "流", "路", "级", "少", "图", "山", "统", "接", "知", "较", "将", "组", "见", "计", "别", "她", "手", "角", "期", "根", "论", "运", "农", "指", "&"
+  ]
+}

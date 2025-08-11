@@ -1,0 +1,133 @@
+{
+ "buttons": {
+    "share": "Compartilhar",
+    "subscribe": "Inscrever-se",
+    "moreAboutProduct": "Mais sobre o produto",
+    "copied": "Copiado!",
+    "copyLink": "Copiar link",
+    "copyLinkToArticle": "Copiar link do artigo",
+    "morePosts": "Mais artigos"
+  },
+  "form": {
+    "emailPlaceholder": "email",
+    "emailLabel": "Email",
+    "subscribeAriaLabel": "Formulário de inscrição"
+  },
+  "ui": {
+    "authorAvatar": "Avatar do autor"
+  },
+  "nav": {
+    "blog": "Blog",
+    "products": "Produtos",
+    "projects": "Casos",
+    "authors": "Autores",
+    "tags": "Tópicos",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu"
+  },
+  "pages": {
+    "authors": {
+      "title": "Autores",
+      "description": "Conheça nossa equipe de especialistas que escreve para {brand}",
+      "goToAuthor": "Ir para o autor",
+      "avatarAlt": "Avatar",
+      "onPlatform": "em"
+    },
+    "tags": {
+      "title": "Categorias",
+      "description": "Todos os artigos por categoria",
+      "blogRubrics": "Categorias do blog",
+      "moreTags": "Mais tags"
+    },
+    "index": {
+      "title": "<Blog>",
+      "description": "Blog sobre automação sob a visão da IA",
+      "articles": "Artigos",
+      "minutes": "min"
+    },
+    "products": {
+      "title": "Produtos",
+      "description": "Todos os produtos Maugli"
+    },
+    "projects": {
+      "tagTitle": "Serviços por tag",
+      "title": "Serviços"
+    },
+    "blog": {
+      "moreByTag": "Mais sobre o assunto"
+    },
+    "productsId": {
+      "articlesByTag": "Artigos sobre o assunto",
+      "casesByTag": "Casos sobre o assunto"
+    }
+  },
+  "socials": {
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter",
+    "telegram": "Telegram",
+    "reddit": "Reddit",
+    "medium": "Medium",
+    "mastodon": "Mastodon",
+    "bluesky": "Bluesky"
+  },
+  "footer": {
+    "allRightsReserved": "Todos os direitos reservados"
+  },
+  "shareIconAriaLabel": {
+    "twitter": "Compartilhar no Twitter",
+    "copy": "Copiar link",
+    "telegram": "Compartilhar no Telegram",
+    "linkedin": "Compartilhar no LinkedIn",
+    "whatsapp": "Compartilhar no WhatsApp",
+    "facebook": "Compartilhar no Facebook",
+    "copied": "Link copiado"
+  },
+  "date": {
+    "today": "hoje",
+    "yesterday": "ontem"
+  },
+  "sidebarAriaLabel": "Barra lateral",
+  "summaryFAQCard": {
+    "ariaLabel": "Resumo e FAQ",
+    "summaryLabel": "Resumo:",
+    "faqLabel": "FAQ:"
+  },
+  "tableOfContents": {
+    "title": "Conteúdo",
+    "ariaLabel": "Conteúdo"
+  },
+  "tagPill": {
+    "ariaLabel": "Tag: {tag}"
+  },
+  "tagPills": {
+    "ariaLabel": "Tag: {name} ({count})"
+  },
+  "tagsSection": {
+    "allCases": "Todos os casos",
+    "allArticles": "Todos os artigos",
+    "allTags": "Todas as tags",
+    "rubricAlt": "Categoria",
+    "tagAriaLabel": "Tag: {name} ({count})"
+  },
+  "themeToggle": {
+    "ariaLabel": "Alterar esquema de cores"
+  },
+  "pagination": {
+    "goToPage": "Ir para a página {page} de {lastPage}",
+    "pageOf": "Página {currentPage} de {lastPage}"
+  },
+  "subscribe": {
+    "heading": "Assine para atualizações",
+    "mutedText": "Receba os últimos artigos e novidades primeiro!"
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "description": "Desculpe, esta página não existe ou foi removida.",
+    "button": "Página principal"
+  },
+  
+  "stopWords": [
+    "o", "a", "de", "e", "do", "da", "em", "um", "para", "é", "com", "não", "uma", "os", "no", "se", "na", "por", "mais", "as", "dos", "como", "mas", "foi", "ao", "ele", "das", "tem", "à", "seu", "sua", "ou", "ser", "quando", "muito", "há", "nos", "já", "está", "eu", "também", "só", "pelo", "pela", "até", "isso", "ela", "entre", "era", "depois", "sem", "mesmo", "aos", "ter", "seus", "suas", "numa", "pelos", "pelas", "esse", "esses", "essa", "essas", "num", "onde", "bem", "te", "então", "foram", "teu", "tua", "teus", "tuas", "nosso", "nossa", "nossos", "nossas", "dele", "dela", "deles", "delas", "este", "esta", "estes", "estas", "aquele", "aquela", "aqueles", "aquelas", "isto", "isso", "aquilo", "todo", "toda", "todos", "todas", "outro", "outra", "outros", "outras", "qual", "quais", "quanto", "quanta", "quantos", "quantas", "algum", "alguma", "alguns", "algumas", "nenhum", "nenhuma", "nenhuns", "nenhumas", "muito", "muita", "muitos", "muitas", "pouco", "pouca", "poucos", "poucas", "tanto", "tanta", "tantos", "tantas", "primeiro", "primeira", "primeiros", "primeiras", "último", "última", "últimos", "últimas", "grande", "grandes", "pequeno", "pequena", "pequenos", "pequenas", "novo", "nova", "novos", "novas", "velho", "velha", "velhos", "velhas", "bom", "boa", "bons", "boas", "mau", "má", "maus", "más", "melhor", "melhores", "pior", "piores", "maior", "maiores", "menor", "menores", "aqui", "aí", "ali", "lá", "cá", "onde", "aonde", "donde", "quando", "enquanto", "como", "porque", "porquê", "para", "que", "conforme", "segundo", "consoante", "salvo", "exceto", "menos", "através", "desde", "durante", "antes", "depois", "contra", "sobre", "sob", "perante", "ante", "segundo", "conforme", "mediante", "durante", "excepto", "fora", "tirante", "afora", "além", "aquém", "dentro", "fora", "perto", "longe", "acima", "abaixo", "adiante", "atrás", "diante", "&"
+  ]
+}

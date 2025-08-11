@@ -1,4 +1,4 @@
-#!/usr/bin/env nconst CURRENT_VERSION = '1.2.48';onst CURRENT_VERSION = '1.2.46';de
+#!/usr/bin/env node
 
 /**
  * Script for centralized updating of all blogs to the latest core-maugli version
@@ -10,10 +10,14 @@
  * node scripts/update-all-blogs.js /path/to/blogs/project1 /path/to/blogs/project2
  */
 
+import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-const CURRENT_VERSION = '1.2.44';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const pkg = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'package.json')));
+const CORE_MAUGLI_VERSION = pkg.version;
 
 // Correct scripts for package.json
 const CORRECT_SCRIPTS = {
@@ -57,7 +61,12 @@ const REQUIRED_SCRIPTS = [
     'scripts/check-version.js',
     'scripts/auto-update.js',
     'scripts/set-force-update.js',
-    '.gitignore'
+    '.gitignore',
+];
+
+// Файлы, которые должны быть в корне проекта
+const REQUIRED_ROOT_FILES = [
+    'astro-image-resize.mjs'
 ];
 
 function log(message, type = 'info') {
@@ -108,7 +117,7 @@ function updateBlogProject(projectPath) {
         
         // 3. Update version
         const oldVersion = packageJson.version;
-        packageJson.version = CURRENT_VERSION;
+        packageJson.version = CORE_MAUGLI_VERSION;
         
         // 4. Update scripts
         let scriptsUpdated = false;
@@ -122,29 +131,41 @@ function updateBlogProject(projectPath) {
         // 5. Save package.json
         fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 4));
         
-        // 6. Copy missing scripts
+        // 6. Copy scripts (заменяем всегда)
         const scriptsDir = path.join(absolutePath, 'scripts');
         if (!fs.existsSync(scriptsDir)) {
             fs.mkdirSync(scriptsDir, { recursive: true });
         }
-        
         let scriptsCopied = 0;
-        const sourceScriptsDir = path.join(process.cwd(), 'scripts');
-        
         for (const scriptFile of REQUIRED_SCRIPTS) {
             const sourcePath = path.join(process.cwd(), scriptFile);
             const targetPath = path.join(absolutePath, scriptFile);
-            
             if (fs.existsSync(sourcePath)) {
-                // Создаем директорию если не существует
                 const targetDir = path.dirname(targetPath);
                 if (!fs.existsSync(targetDir)) {
                     fs.mkdirSync(targetDir, { recursive: true });
                 }
-                
-                // Копируем файл
+                // Всегда заменяем файл
                 fs.copyFileSync(sourcePath, targetPath);
                 scriptsCopied++;
+            }
+        }
+        // 6.1. Копируем файлы в корень (например, astro-image-resize.mjs)
+        for (const rootFile of REQUIRED_ROOT_FILES) {
+            const sourcePath = path.join(process.cwd(), rootFile);
+            const targetPath = path.join(absolutePath, rootFile);
+            if (fs.existsSync(sourcePath)) {
+                fs.copyFileSync(sourcePath, targetPath);
+            }
+        }
+        // 6.2. Удаляем дублирующиеся скрипты с " 2" в имени
+        const glob = require('glob');
+        const dups = glob.sync(path.join(scriptsDir, '* 2.*'));
+        for (const dup of dups) {
+            try {
+                fs.unlinkSync(dup);
+            } catch (e) {
+                log(`Не удалось удалить дубликат: ${dup}`, 'warning');
             }
         }
         
@@ -155,7 +176,7 @@ function updateBlogProject(projectPath) {
         
         // 8. Результат
         log(`Project updated successfully!`, 'success');
-        log(`  Version: ${oldVersion} → ${CURRENT_VERSION}`, 'info');
+        log(`  Version: ${oldVersion} → ${CORE_MAUGLI_VERSION}`, 'info');
         log(`  Scripts updated: ${scriptsUpdated ? 'Yes' : 'No'}`, 'info');
         log(`  Script files copied: ${scriptsCopied}`, 'info');
         

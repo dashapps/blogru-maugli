@@ -1,0 +1,133 @@
+{
+  "buttons": {
+    "share": "Teilen",
+    "subscribe": "Abonnieren",
+    "moreAboutProduct": "Mehr über das Produkt",
+    "copied": "Kopiert!",
+    "copyLink": "Link kopieren",
+    "copyLinkToArticle": "Link zum Artikel kopieren",
+    "morePosts": "Weitere Artikel"
+  },
+  "form": {
+    "emailPlaceholder": "E-Mail",
+    "emailLabel": "E-Mail",
+    "subscribeAriaLabel": "Abonnement-Formular"
+  },
+  "ui": {
+    "authorAvatar": "Autor-Avatar"
+  },
+  "nav": {
+    "blog": "Blog",
+    "products": "Produkte",
+    "projects": "Fälle",
+    "authors": "Autoren",
+    "tags": "Kategorien",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
+  },
+  "pages": {
+    "authors": {
+      "title": "Autoren",
+      "description": "Lernen Sie unser Expertenteam kennen, das für {brand} schreibt",
+      "goToAuthor": "Zum Autor gehen",
+      "avatarAlt": "Avatar",
+      "onPlatform": "auf"
+    },
+    "tags": {
+      "title": "Kategorien",
+      "description": "Alle Artikel nach Kategorie",
+      "blogRubrics": "Blog-Kategorien",
+      "moreTags": "Weitere Tags"
+    },
+    "index": {
+      "title": "<Blog>",
+      "description": "Blog über Automatisierung aus Sicht der KI",
+      "articles": "Artikel",
+      "minutes": "Min"
+    },
+    "products": {
+      "title": "Produkte",
+      "description": "Alle Maugli-Produkte"
+    },
+    "projects": {
+      "tagTitle": "Services nach Tag",
+      "title": "Services"
+    },
+    "blog": {
+      "moreByTag": "Mehr zum Thema"
+    },
+    "productsId": {
+      "articlesByTag": "Artikel zum Thema",
+      "casesByTag": "Fälle zum Thema"
+    }
+  },
+  "socials": {
+    "email": "E-Mail",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter",
+    "telegram": "Telegram",
+    "reddit": "Reddit",
+    "medium": "Medium",
+    "mastodon": "Mastodon",
+    "bluesky": "Bluesky"
+  },
+  "footer": {
+    "allRightsReserved": "Alle Rechte vorbehalten"
+  },
+  "shareIconAriaLabel": {
+    "twitter": "Auf Twitter teilen",
+    "copy": "Link kopieren",
+    "telegram": "Auf Telegram teilen",
+    "linkedin": "Auf LinkedIn teilen",
+    "whatsapp": "Auf WhatsApp teilen",
+    "facebook": "Auf Facebook teilen",
+    "copied": "Link kopiert"
+  },
+  "date": {
+    "today": "heute",
+    "yesterday": "gestern"
+  },
+  "sidebarAriaLabel": "Seitenleiste",
+  "summaryFAQCard": {
+    "ariaLabel": "Zusammenfassung und FAQ",
+    "summaryLabel": "Zusammenfassung:",
+    "faqLabel": "FAQ:"
+  },
+  "tableOfContents": {
+    "title": "Inhalt",
+    "ariaLabel": "Inhalt"
+  },
+  "tagPill": {
+    "ariaLabel": "Tag: {tag}"
+  },
+  "tagPills": {
+    "ariaLabel": "Tag: {name} ({count})"
+  },
+  "tagsSection": {
+    "allCases": "Alle Fälle",
+    "allArticles": "Alle Artikel",
+    "allTags": "Alle Tags",
+    "rubricAlt": "Kategorie",
+    "tagAriaLabel": "Tag: {name} ({count})"
+  },
+  "themeToggle": {
+    "ariaLabel": "Farbschema wechseln"
+  },
+  "pagination": {
+    "goToPage": "Gehe zu Seite {page} von {lastPage}",
+    "pageOf": "Seite {currentPage} von {lastPage}"
+  },
+  "subscribe": {
+    "heading": "Abonniere für Updates",
+    "mutedText": "Erhalte die neuesten Artikel und Nachrichten zuerst!"
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Entschuldigung, diese Seite existiert nicht oder wurde entfernt.",
+    "button": "Zur Hauptseite"
+  },
+  
+  "stopWords": [
+    "der", "die", "das", "und", "in", "auf", "mit", "von", "zu", "für", "an", "bei", "nach", "vor", "über", "unter", "durch", "ohne", "gegen", "um", "aus", "bis", "seit", "während", "wegen", "trotz", "statt", "anstatt", "außer", "binnen", "dank", "entlang", "entsprechend", "gemäß", "laut", "samt", "zufolge", "zugunsten", "zulasten", "zuliebe", "zuwider", "ist", "sind", "war", "waren", "sein", "haben", "hat", "hatte", "hatten", "wird", "werden", "wurde", "wurden", "kann", "können", "konnte", "konnten", "soll", "sollen", "sollte", "sollten", "will", "wollen", "wollte", "wollten", "muss", "müssen", "musste", "mussten", "darf", "dürfen", "durfte", "durften", "mag", "mögen", "mochte", "mochten", "ein", "eine", "einer", "eines", "einem", "einen", "kein", "keine", "keiner", "keines", "keinem", "keinen", "dieser", "diese", "dieses", "diesem", "diesen", "jener", "jene", "jenes", "jenem", "jenen", "welcher", "welche", "welches", "welchem", "welchen", "alle", "alles", "allen", "aller", "manche", "mancher", "manches", "manchem", "manchen", "einige", "einiger", "einiges", "einigem", "einigen", "viele", "vieler", "vieles", "vielem", "vielen", "wenige", "weniger", "weniges", "wenigem", "wenigen", "andere", "anderer", "anderes", "anderem", "anderen", "nicht", "nichts", "nie", "niemals", "immer", "oft", "manchmal", "selten", "hier", "da", "dort", "wo", "wohin", "woher", "wann", "wie", "warum", "weshalb", "wieso", "was", "wer", "wen", "wem", "wessen", "sehr", "ziemlich", "ganz", "völlig", "etwas", "etwa", "fast", "bereits", "schon", "noch", "nur", "auch", "sogar", "zwar", "aber", "jedoch", "doch", "dennoch", "trotzdem", "sondern", "oder", "entweder", "weder", "sowohl", "als", "wie", "wenn", "falls", "obwohl", "obgleich", "während", "bevor", "nachdem", "seit", "bis", "damit", "dass", "ob", "weil", "da", "falls", "sofern", "solange", "sobald", "&"
+  ]
+}
