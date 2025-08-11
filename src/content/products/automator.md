@@ -1,13 +1,13 @@
 ---
-title: 'Example Product'
-description: 'Demo product for showcase purposes.'
-publishDate: 2024-01-01
-updatedDate: 2024-01-01
+title: 'Automator'
+description: 'ИИ-аналитик, помогающий понять что и как ты можешь автоматизировать в бизнесе и сколько сэкономить, внедрив предложенное решение'
+publishDate: 2025-08-11
+updatedDate: 2025-08-11
 isFeatured: false
-tags: ['demo', 'example']
+tags: ['чат-бот', 'automator']
 image:
   src: '/img/free_automation.webp'
-  alt: 'Maugli Content Farm'
+  alt: 'Maugli Automator Bot'
 seo:
   title: 'Example Product'
   description: 'Demo product for showcase purposes.'
